@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Controller
 @RequestMapping("/ch01")
-public class ch01Controller {
+public class Ch01Controller {
 	// private static final Logger LOGGER = LoggerFactory.getLogger(ch01Controller.class);
 	@RequestMapping("/content")
 	public String content(String chNum, Model model) {

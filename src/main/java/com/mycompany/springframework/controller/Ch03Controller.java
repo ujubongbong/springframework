@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @Slf4j
 @RequestMapping("/ch03")
-public class ch03Controller {
+public class Ch03Controller {
  @GetMapping("/receiveParamData")
  public String receiveParamData(
 		String chNum,

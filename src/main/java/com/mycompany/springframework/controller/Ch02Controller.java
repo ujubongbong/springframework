@@ -33,7 +33,7 @@ import lombok.extern.slf4j.Slf4j;
 // 로깅
 @Slf4j
 @RequestMapping("/ch02")
-public class ch02Controller {
+public class Ch02Controller {
 	@GetMapping("/getMethod")
 	public String getMethod(String chNum, String bkind, String bno, Model model) {
 		// 요청 처리 코드

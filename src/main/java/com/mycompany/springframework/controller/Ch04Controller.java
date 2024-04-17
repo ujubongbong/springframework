@@ -37,13 +37,13 @@ public class Ch04Controller {
 	@RequestMapping("/login")
 	public String login(@Valid Ch04LoginForm loginForm, Errors errors, Model model) {
 		model.addAttribute("chNum", "ch04");
-		log.info("실행");
+		//log.info("실행");
 		// 유효성 검사 실패시 다시 로그인 폼 보여주기
 		if(errors.hasErrors()) {
-			log.info("실패");
+		//	log.info("실패");
 			return "ch04/loginForm";
 		} else {
-			log.info("성공");
+		//	log.info("성공");
 		}
 		
 		// 로그인 처리 
@@ -63,13 +63,13 @@ public class Ch04Controller {
 	@RequestMapping("/join")
 	public String join(@Valid Ch04JoinForm joinForm, Errors errors, Model model) {
 		model.addAttribute("chNum", "ch04");
-		log.info("실행");
+		//log.info("실행");
 		// 유효성 검사 실패시 다시 로그인 폼 보여주기
 		if(errors.hasErrors()) {
-			log.info("실패");
+		//	log.info("실패");
 			return "ch04/joinForm";
 		} else {
-			log.info("성공");
+		//	log.info("성공");
 		}
 		
 		// 로그인 처리 
