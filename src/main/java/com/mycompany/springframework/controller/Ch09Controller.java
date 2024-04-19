@@ -34,7 +34,7 @@ public class Ch09Controller {
 		return "ch09/fileUploadForm";
 	}
 	
-	/* @PostMapping("/fileUpload") // 개별 매개변수로 받음
+	@PostMapping("/fileUpload") // 개별 매개변수로 받음
 	public String fileUpload(String title, String desc, MultipartFile attach) throws IOException {
 		log.info("제목: " + title);
 		log.info("설명: " + desc);
@@ -48,7 +48,7 @@ public class Ch09Controller {
 		File destFile = new File(destDir, new Date().getTime()+"-"+attach.getOriginalFilename());
 		attach.transferTo(destFile);
 		return "ch09/fileUploadForm";
-	}*/
+	}
 	
 	@PostMapping(value="/fileUploadAjax", produces="application/json; charset=UTF-8")	// Dto로 받음
 	@ResponseBody
