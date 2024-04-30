@@ -14,12 +14,12 @@
 	  <!-- 사용자 정의 자바스크립트 -->
 	  <script>
 	  	function handleBtn1() {
-			console.log("handleBtn()");
-			location.href ="getMethod?chNum=ch02&bkind=qAndA&bno=200";
+			console.log("handleBtn1()");
+			location.href ="getMethod?chNum=ch02&bkind=qAndA&bno=200";	// javascript로 요청
 		}
 	  	
 	  	function handleBtn2() {
-			console.log("handleBtn()");
+			console.log("handleBtn2()");
 			$.ajax({
 				url: "getMethodAjax",
 				type: "get", // 메서드 대신 type 사용 가능
