@@ -216,5 +216,36 @@
       </div>
     </div>
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch15'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+        Ch15. Transaction
+      </button>
+    </h2>
+    <div id="collapse15" class="accordion-collapse collapse ${chNum=='ch15'?'show':''}" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      	<ul>
+      		<li><a href="${pageContext.request.contextPath}/ch15/accountList">계좌 이체하기</a></li>         
+      	</ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch17'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+        Ch17. 스프링 시큐리티
+      </button>
+    </h2>
+    <div id="collapse17" class="accordion-collapse collapse ${chNum=='ch17'?'show':''}" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      	<ul>
+      		<li><a href="${pageContext.request.contextPath}/ch17/loginForm">로그인</a></li>  
+      		<li><a href="${pageContext.request.contextPath}/ch17/admin/page">ADMIN 페이지</a></li>        
+      		<li><a href="${pageContext.request.contextPath}/ch17/manager/page">MANAGER 페이지</a></li>        
+      		<li><a href="${pageContext.request.contextPath}/ch17/user/page">USER 페이지(로그인 했을 경우)</a></li>               
+      	</ul>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
