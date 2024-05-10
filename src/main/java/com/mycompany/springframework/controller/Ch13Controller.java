@@ -33,9 +33,6 @@ public class Ch13Controller {
 	@Autowired
 	private Ch13Service service;
 	
-	@Autowired
-	private Ch13BoardDao boardDao;
-	
 	@GetMapping("/writeBoardForm")
 	public String writeBoardForm() {
 		return "ch13/writeBoardForm";

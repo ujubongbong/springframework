@@ -28,10 +28,10 @@
 	      <!-- logout도 post 방식으로 요청(_csrf의 토큰을 전달해야함) -->
 	      <security:csrf disabled="true"/>
 	      
-	      <!-- 요청 URL 권한 설정 방법1--> 
+	      <!-- 요청 URL 권한 설정 방법1 -->
 	 	  <security:intercept-url pattern="/ch17/admin/**" access="hasRole('ROLE_ADMIN')"/>
 	      <security:intercept-url pattern="/ch17/manager/**" access="hasRole('ROLE_MANAGER')"/> 
-	      <security:intercept-url pattern="/**" access="isAuthenticated()"/>
+	      <security:intercept-url pattern="/user/**" access="isAuthenticated()"/>
 	      
 	      <security:intercept-url pattern="/**" access="permitAll"/>
 	      
@@ -40,14 +40,19 @@
 	   </security:http>
 	   
 	   <!-- 로그인  성공했을 때 실행하는 핸들러 -->
-	   <bean id="ch17AuthenticationSuccessHandler" class="com.mycompany.springframework.security.Ch17AuthenticationSuccessHandler"></bean>
+	   <bean id="ch17AuthenticationSuccessHandler" class="com.mycompany.springframework.security.Ch17AuthenticationSuccessHandler">
+	   	<property name="defaultTargetUrl" value="/"></property>
+	   </bean>
 	   
 	   <!-- 로그인  실패했을 때 실행하는 핸들러 -->
-	   <bean id="ch17AuthenticationFailureHandler" class="com.mycompany.springframework.security.Ch17AuthenticationFailureHandler"></bean>
+	   <bean id="ch17AuthenticationFailureHandler" class="com.mycompany.springframework.security.Ch17AuthenticationFailureHandler">
+	   	<property name="defaultFailureUrl" value="/ch17/loginForm"></property>
+	   </bean>
 	   
 	   <!-- 로그아웃 성공했을 때 실행하는 핸들러 -->
-	   <bean id="ch17LogoutSuccessHandler" class="com.mycompany.springframework.security.Ch17LogoutSuccessHandler"></bean>
-	   
+	   <bean id="ch17LogoutSuccessHandler" class="com.mycompany.springframework.security.Ch17LogoutSuccessHandler">
+	   	<property name="defaultTargetUrl" value="/ch17/loginForm"></property>
+	   </bean>
 	   
 	   <!-- 
 	   요청 URL 권한 설정 방법2

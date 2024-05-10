@@ -21,7 +21,7 @@ public class Ch17AuthenticationFailureHandler
 
 		log.info("실행");
 		// 로그인 실패 후에 이동할 url
-		setDefaultFailureUrl("/ch17/loginForm");
+		// setDefaultFailureUrl("/ch17/loginForm");
 		// 기본 설정을 적용하기 위해 상위 메서드 호출
 		super.onAuthenticationFailure(request, response, exception);
 	}
